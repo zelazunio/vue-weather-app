@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <v-container style="min-width: 300px; width: 300px; max-width: 300px">
         <v-skeleton-loader class="mx-auto" type="card" v-if="!weather" />
         <v-container v-if="weather" class="rounded-lg teal lighten-5">
             <v-row class="d-flex flex-nowrap">
