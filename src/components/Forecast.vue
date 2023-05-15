@@ -1,9 +1,12 @@
 <template>
     <v-container>
-        <forecast-filters @getForecast="getForecast"/>
+        <forecast-filters @getForecast="getForecast" />
+        <v-skeleton-loader v-if="!forecast" width="100%" height="50vw" type="table-tbody" />
         <v-container class="d-flex flex-wrap" v-if="forecast">
-            <forecast-weather-card v-for="(day, index) in this.forecast.daily.time" :key="index"
-                :weather="dailyWeather(forecast, index)" class="col-auto" />
+            <template v-for="(day, index) in this.forecast.daily.time">
+                <forecast-weather-card v-if="index > 0" :key="index" :weather="dailyWeather(forecast, index)"
+                    class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3" />
+            </template>
         </v-container>
     </v-container>
 </template>
@@ -24,6 +27,7 @@ export default {
     },
     methods: {
         getForecast() {
+            this.forecast = undefined;
             let parametersString = "";
             parametersString += `latitude=${this.$store.state.locations[this.$store.state.forecastFilters.city].lat}`;
             parametersString += `&longitude=${this.$store.state.locations[this.$store.state.forecastFilters.city].lon}`;
