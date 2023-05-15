@@ -14,7 +14,7 @@ import WeatherCard from './WeatherCard.vue';
 import dailyWeather from '../mixins/dailyWeather';
 
 export default {
-    name: 'TomorowWeatherCard',
+    name: 'TodayWeatherCard',
     components: {
         WeatherCard
     },

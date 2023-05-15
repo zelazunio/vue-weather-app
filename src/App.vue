@@ -16,12 +16,12 @@
     <v-main class="blue-grey lighten-4">
       <error-message />
       <v-container class="text-h4 text-sm-h2 text-md-h1 text-lg-h1 text-xl-h1">
-        Tomorow's weather:
+        Today's weather:
       </v-container>
       <v-container class="d-flex flex-wrap">
-        <tomorow-weather-card city-name="Warsaw" class="col-auto" key="TodayInWarsaw" />
-        <tomorow-weather-card city-name="Krakow" class="col-auto" key="TodayInKrakow" />
-        <tomorow-weather-card city-name="Stockholm" class="col-auto" key="TodayInStockholm" />
+        <today-weather-card city-name="Warsaw" class="col-auto" key="TodayInWarsaw" />
+        <today-weather-card city-name="Krakow" class="col-auto" key="TodayInKrakow" />
+        <today-weather-card city-name="Stockholm" class="col-auto" key="TodayInStockholm" />
       </v-container>
       <v-container>
         <v-container class="text-h5 text-sm-h4 text-md-h3 text-lg-h2 text-xl-h2">
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import TomorowWeatherCard from './components/TomorowWeatherCard.vue';
+import TodayWeatherCard from './components/TodayWeatherCard.vue';
 import Forecast from './components/Forecast.vue';
 import ErrorMessage from './components/ErrorMessage.vue';
 
@@ -42,7 +42,7 @@ export default {
   name: 'App',
 
   components: {
-    TomorowWeatherCard,
+    TodayWeatherCard,
     Forecast,
     ErrorMessage
   },
