@@ -2,7 +2,7 @@
 
 Simple weather app<br>
 You can see a weather forecast for tomorrow in your office's locations or get long term forecast - just select parameters in the filters panels.<br>
-Made with Vue2 + Vuetify.
+Made with Vue2 + Vuetify.<br>
 Running version avilable [here](https://vue-weather-app-khaki.vercel.app/)
 ## Project setup
 ```
